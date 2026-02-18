@@ -64,14 +64,16 @@
 		}
 	    $(document).ready(function(){
 			$("button").click(function(){
-			   var t = $('#temp').val();//celsius
-			   var u = $('#unit').val();
+			   	var t = $('#temp').val();//celsius
+			  	var u = $('#unit').val();
 			   
-			 if(validate(t)==0) return;  
+			 	if(validate(t)==0) return;  
 			   
-			 var result = calculate(t,u);  
+			 	var result = calculate(t,u);  
 			   
-			   alert("Temperature is "+t1+" in "+u1);
+				//alert("Temperature is "+t1+" in "+u1);
+				$("#result").html("Temperature is <b>"+
+					result.temp+"</b> in "+result.unit);
 			});
 		});
 	</script>
